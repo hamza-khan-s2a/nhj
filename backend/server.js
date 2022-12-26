@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 // mongoose.connect(config.MONGODB_URL).then(() => {
 //   console.log('Connected to mongodb')
 // }).catch((err) => console.error(`not connected ${err}`))
-mongoose.set('strictQuery', false);
+mongoose.set('strictQuery', true);
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(config.MONGODB_URL);
